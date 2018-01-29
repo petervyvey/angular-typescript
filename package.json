@@ -19,7 +19,7 @@
     "pipeline:clean:prd": "npm run clean-step:dist && npm run clean-step:node_modules",
     "pipeline:build": "npm run pipeline:build:dev",
     "pipeline:build:dev": "npm run pipeline:clean:dev && npm run build-step:lint && npm run build-step:dev",
-    "pipeline:build:prd": "npm run pipeline:clean:prd && npm install && npm run build-step:lint && npm run build-step:prd"
+    "pipeline:build:prd": "npm run pipeline:clean:prd && npm install && npm run build-step:lint && npm run e2e && npm run build-step:prd"
   },
   "private": true,
   "dependencies": {
