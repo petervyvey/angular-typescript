@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { CountrySelectorComponent } from './country-selector/country-selector.component';
+import { ComponentsModule } from './components/components.module';
+import { VieuwsModule } from './views/views.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CountrySelectorComponent
   ],
   imports: [
-    BrowserModule
+    NgbModule.forRoot(),
+
+    BrowserModule,
+    ComponentsModule,
+    VieuwsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

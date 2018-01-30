@@ -1,2 +1,2 @@
 
-export * as CountrySelector from './country-selector';
+export * from './country-selector.component';
