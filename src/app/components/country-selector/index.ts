@@ -1,2 +1,6 @@
 
-export * from './country-selector.component';
+import { CountrySelectorComponent } from './country-selector.component';
+
+export {
+  CountrySelectorComponent
+};
