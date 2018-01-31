@@ -1,8 +1,6 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
-import { environment } from './../../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +8,11 @@ import { environment } from './../../environments/environment';
   styleUrls: ['./application.component.scss'],
 
 })
-export class ApplicationComponent implements OnInit {
+export class ApplicationComponent {
 
   constructor(
     private translate: TranslateService
   ) { }
 
   public title = 'application';
-
-  public ngOnInit(): void {
-    this.translate.setDefaultLang(environment.defaultUiLanguage);
-    this.translate.use(environment.defaultUiLanguage);
-  }
 }

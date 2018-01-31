@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-content',
+  selector: 'app-view-layout-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })

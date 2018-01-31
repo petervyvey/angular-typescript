@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
+import { Logger } from './foundation/logger';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -24,4 +26,4 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 class SharedModule { }
 
-export { SharedModule, TranslateService };
+export { SharedModule, TranslateService, Logger };

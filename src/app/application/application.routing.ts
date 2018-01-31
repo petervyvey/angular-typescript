@@ -18,4 +18,4 @@ import { HomeComponent } from '../views/home/home.component';
     RouterModule
   ]
 })
-export class ApplicationRoutingModule { }
+export class ApplicationRouterModule { }

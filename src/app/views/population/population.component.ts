@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-population',
+  selector: 'app-view-population',
   templateUrl: './population.component.html',
   styleUrls: ['./population.component.scss']
 })

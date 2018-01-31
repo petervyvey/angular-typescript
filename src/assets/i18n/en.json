@@ -1,5 +1,7 @@
 {
   "HOME": {
-    "WELCOME": "Welcome home!"
+    "APPLICATION_NAME_PANEL": {
+      "HEADER_TITLE": "Application name"
+    }
   }
 }
