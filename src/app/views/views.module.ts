@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { Logger } from '../shared.module';
 import { LayoutComponent } from './layout/layout.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { ContentComponent } from './layout/content/content.component';
@@ -28,4 +29,8 @@ import { PopulationModule } from './population/population.module';
     ContentComponent
   ]
 })
-export class VieuwsModule { }
+export class VieuwsModule {
+    constructor() {
+        Logger.Info('Views:VieuwsModule', 'done');
+    }
+}

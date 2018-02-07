@@ -24,6 +24,7 @@ import { Logger } from './foundation/logger';
         TranslateModule
     ]
 })
-class SharedModule { }
+class SharedModule {
+}
 
 export { SharedModule, TranslateService, Logger };

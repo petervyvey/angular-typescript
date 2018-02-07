@@ -1,5 +1,8 @@
 body {
     background-color: #fdfdfd;
     height: 100vh;
-    padding-top: 72px;
+
+    &.with-margin-top {
+        padding-top: 72px;
+    }
 }

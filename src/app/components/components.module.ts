@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 
 import * as CountrySelector from './country-selector';
+import { Logger } from '../shared.module';
 
 export {
     CountrySelector
@@ -14,6 +15,6 @@ export {
 })
 export class ComponentsModule {
     constructor() {
-        // Logger.Info('View:AccountModule', 'done');
+        Logger.Info('Components:ComponentsModule', 'done');
     }
 }
