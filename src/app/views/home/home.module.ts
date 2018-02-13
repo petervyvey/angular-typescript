@@ -4,20 +4,24 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from './home.routing';
+import { Logger } from '../../shared.module';
 
 @NgModule({
   imports: [
-    RouterModule.forChild([
-      { path: 'home', component: HomeComponent }
-    ]),
-    TranslateModule
+    TranslateModule,
+    HomeRoutingModule
   ],
   declarations: [
     HomeComponent,
   ],
   exports: [
-    RouterModule,
-    TranslateModule
+    TranslateModule,
+    HomeRoutingModule
   ]
 })
-export class HomeModule { }
+export class HomeModule {
+  constructor() {
+    Logger.Info('Views:HomeModule', 'done');
+  }
+}

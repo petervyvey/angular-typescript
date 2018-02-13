@@ -2,20 +2,30 @@
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
-import { HomeComponent } from '../views/home/home.component';
+import { Logger } from '../shared.module';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      { path: '', component: HomeComponent }
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      }
     ])
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
   ],
   exports: [
     RouterModule
   ]
 })
-export class ApplicationRouterModule { }
+export class ApplicationRouterModule {
+  constructor() {
+    Logger.Info('Application:ApplicationRouterModule', 'done');
+  }
+}

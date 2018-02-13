@@ -1,36 +1,29 @@
 
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
 import { Logger } from '../shared.module';
-import { LayoutComponent } from './layout/layout.component';
-import { NavigationComponent } from './layout/navigation/navigation.component';
-import { ContentComponent } from './layout/content/content.component';
 
+import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
 import { TimeZoneModule } from './time-zone/time-zone.module';
 import { PopulationModule } from './population/population.module';
 
 @NgModule({
   imports: [
-    RouterModule,
+    LayoutModule,
     HomeModule,
     TimeZoneModule,
     PopulationModule
   ],
-  declarations: [
-    LayoutComponent,
-    NavigationComponent,
-    ContentComponent
-  ],
   exports: [
-    LayoutComponent,
-    NavigationComponent,
-    ContentComponent
+    LayoutModule,
+    HomeModule,
+    TimeZoneModule,
+    PopulationModule
   ]
 })
 export class VieuwsModule {
-    constructor() {
-        Logger.Info('Views:VieuwsModule', 'done');
-    }
+  constructor() {
+    Logger.Info('Views:ViewsModule', 'done');
+  }
 }
