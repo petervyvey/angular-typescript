@@ -18,41 +18,41 @@ import { environment } from './../../environments/environment';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+    return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-  declarations: [
-    ApplicationComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-    NgbModule.forRoot(),
-    BrowserModule,
+    declarations: [
+        ApplicationComponent,
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        NgbModule.forRoot(),
+        BrowserModule,
 
-    ApplicationLoggingModule,
-    ApplicationRouterModule,
-    ComponentsModule,
-    VieuwsModule
-  ],
-  providers: [],
-  bootstrap: [ApplicationComponent]
+        ApplicationLoggingModule,
+        ApplicationRouterModule,
+        ComponentsModule,
+        VieuwsModule
+    ],
+    providers: [],
+    bootstrap: [ApplicationComponent]
 })
 export class Module {
-  constructor(
-    private translate: TranslateService
-  ) {
-    this.translate.setDefaultLang(environment.defaultUiLanguage);
-    this.translate.use(environment.defaultUiLanguage);
+    constructor(
+        private translate: TranslateService
+    ) {
+        this.translate.setDefaultLang(environment.defaultUiLanguage);
+        this.translate.use(environment.defaultUiLanguage);
 
-    Logger.Info('Application:ApplicationModule', 'done');
-  }
+        Logger.Info('Application:ApplicationModule', 'done');
+    }
 }

@@ -8,20 +8,20 @@ import { HomeRoutingModule } from './home.routing';
 import { Logger } from '../../shared.module';
 
 @NgModule({
-  imports: [
-    TranslateModule,
-    HomeRoutingModule
-  ],
-  declarations: [
-    HomeComponent,
-  ],
-  exports: [
-    TranslateModule,
-    HomeRoutingModule
-  ]
+    imports: [
+        TranslateModule,
+        HomeRoutingModule
+    ],
+    declarations: [
+        HomeComponent,
+    ],
+    exports: [
+        TranslateModule,
+        HomeRoutingModule
+    ]
 })
 export class HomeModule {
-  constructor() {
-    Logger.Info('Views:HomeModule', 'done');
-  }
+    constructor() {
+        Logger.Info('Views:HomeModule', 'done');
+    }
 }
