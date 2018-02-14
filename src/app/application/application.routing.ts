@@ -1,6 +1,5 @@
 
 import { NgModule } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Logger } from '../shared.module';
 
@@ -13,12 +12,6 @@ import { Logger } from '../shared.module';
         pathMatch: 'full',
       }
     ])
-  ],
-  providers: [
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy
-    }
   ],
   exports: [
     RouterModule
