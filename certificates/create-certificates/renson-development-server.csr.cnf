@@ -1,0 +1,14 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+C=BE
+ST=FLANDERS
+L=WAREGEM
+O=RENSON
+OU=RENSON DEVELOPMENT
+emailAddress=development@renson.development.be
+CN = localhost
