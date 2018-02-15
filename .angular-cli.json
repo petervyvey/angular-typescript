@@ -60,8 +60,8 @@
         },
         "serve": {
             "ssl": true,
-            "sslKey": "certificates/renson-development-server.key",
-            "sslCert": "certificates/renson-development-server.crt"
+            "sslKey": "certificate/renson-development-mylio-support.key",
+            "sslCert": "certificate/renson-development-mylio-support.crt"
         }
     }
 }
