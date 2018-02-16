@@ -1,17 +1,17 @@
-
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { TimeZoneRoutingModule } from './time-zone.routing';
 
 import { TimeZoneComponent } from './time-zone.component';
+import { TimeZoneDetailsComponent } from './time-zone-details/time-zone-details.component';
 
 @NgModule({
-  imports: [
-    RouterModule.forChild([
-      { path: 'timezone', component: TimeZoneComponent }
-    ])
-  ],
-  declarations: [
-    TimeZoneComponent
-  ]
+    imports: [
+        TimeZoneRoutingModule
+    ],
+    declarations: [
+        TimeZoneComponent,
+        TimeZoneDetailsComponent
+    ]
 })
-export class TimeZoneModule { }
+export class TimeZoneModule {
+}

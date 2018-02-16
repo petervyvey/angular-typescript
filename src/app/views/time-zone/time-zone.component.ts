@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-view-time-zone',
-  templateUrl: './time-zone.component.html',
-  styleUrls: ['./time-zone.component.scss']
+    selector: 'app-view-time-zone',
+    templateUrl: './time-zone.component.html',
+    styleUrls: ['./time-zone.component.scss']
 })
 export class TimeZoneComponent implements OnInit {
 
-  constructor() { }
+    constructor(private router: Router) {
+    }
 
-  ngOnInit() {
-  }
+    public ngOnInit() {
+    }
+
+    public onClick() {
+        console.log('click');
+        this.router.navigate(['/timezone', 123]);
+    }
 
 }
