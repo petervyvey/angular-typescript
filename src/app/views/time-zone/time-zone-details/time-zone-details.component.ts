@@ -13,11 +13,12 @@ export class TimeZoneDetailsComponent implements OnInit, OnDestroy {
     }
 
     private destroy$: ReplaySubject<boolean> = new ReplaySubject<boolean>();
+    private timeZoneId: string;
 
     public ngOnInit() {
         this.route.params
             .takeUntil(this.destroy$)
-            .subscribe(x => console.log('params', x));
+            .subscribe(x => this.timeZoneId = x.timeZoneId);
     }
 
     public ngOnDestroy() {
