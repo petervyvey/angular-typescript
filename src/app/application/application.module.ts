@@ -10,7 +10,7 @@ import { Logger } from '../foundation/logger';
 import { ApplicationComponent } from './application.component';
 import { ApplicationRouterModule } from './application.routing';
 import { ComponentsModule } from '../components/components.module';
-import { VieuwsModule } from '../views/views.module';
+import { ViewsModule } from '../views/views.module';
 
 import { ApplicationLoggingModule } from './application-logging.module';
 
@@ -41,15 +41,13 @@ export function HttpLoaderFactory(http: HttpClient) {
         ApplicationLoggingModule,
         ApplicationRouterModule,
         ComponentsModule,
-        VieuwsModule
+        ViewsModule
     ],
     providers: [],
     bootstrap: [ApplicationComponent]
 })
 export class Module {
-    constructor(
-        private translate: TranslateService
-    ) {
+    constructor(private translate: TranslateService) {
         this.translate.setDefaultLang(environment.defaultUiLanguage);
         this.translate.use(environment.defaultUiLanguage);
 

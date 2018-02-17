@@ -10,7 +10,7 @@ export class ContentComponent implements OnInit {
 
   constructor(private title: Title) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.title.setTitle('content');
   }
 

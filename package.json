@@ -35,8 +35,10 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0",
     "@ngx-translate/core": "^9.1.1",
     "@ngx-translate/http-loader": "^2.0.1",
+    "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
     "ng2-logger": "^2.0.32",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"

@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 
 import { Logger } from '../shared.module';
@@ -22,7 +21,7 @@ import { PopulationModule } from './population/population.module';
         PopulationModule
     ]
 })
-export class VieuwsModule {
+export class ViewsModule {
     constructor() {
         Logger.Info('Views:ViewsModule', 'done');
     }

@@ -1,5 +1,12 @@
-<p>
-  time-zone works, great!
-    <button (click)="onClick()">Navigate</button>
-</p>
-<router-outlet></router-outlet>
+<div class="row">
+    <div class="col-6 offset-3">
+        <app-search-text-box [query]="query" [placeholder]="'select a country'" (modelChanged)="onModelChanged($event)"></app-search-text-box>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+

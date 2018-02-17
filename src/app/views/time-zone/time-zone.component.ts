@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { IModel } from './components/search-text-box/model';
 
 @Component({
     selector: 'app-view-time-zone',
@@ -8,15 +9,20 @@ import { Router } from '@angular/router';
 })
 export class TimeZoneComponent implements OnInit {
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private route: ActivatedRoute) {
     }
+
+    public query: string;
 
     public ngOnInit() {
+        this.route.params.subscribe(x => this.query = x.timeZoneId);
     }
 
-    public onClick() {
-        console.log('click');
-        this.router.navigate(['/timezone', 123]);
+    public onModelChanged(model: IModel) {
+        this.navigateTo(model.query);
     }
 
+    private navigateTo(timeZoneId: string) {
+        this.router.navigate(['/timezone', timeZoneId]);
+    }
 }
