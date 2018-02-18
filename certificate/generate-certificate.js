@@ -2,7 +2,12 @@
 
 const fs = require("fs");
 const selfsigned = require("selfsigned");
-const attrs = [{ name: "commonName", value: "localhost" }];
+
+const attrs = [
+    { name: "commonName",
+    value: "localhost"
+}];
+
 const pems = selfsigned.generate(attrs, {
     algorithm: "sha256",
     keySize: 2048,
