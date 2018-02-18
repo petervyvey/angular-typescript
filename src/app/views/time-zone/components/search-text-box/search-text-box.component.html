@@ -2,7 +2,7 @@
     <div class="input-group mb-3">
         <input type="text" class="form-control" autocomplete="off" [placeholder]="placeholder" [(ngModel)]="model.query" name="query" #query="ngModel" required>
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="submit" [disabled]="!query.value">
+            <button class="btn btn-primary" type="submit" [disabled]="!query.value">
                 <fa name="search"></fa>
             </button>
         </div>
