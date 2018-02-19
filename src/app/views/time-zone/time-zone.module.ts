@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Logger } from '../../shared.module';
 import { TimeZoneRoutingModule } from './time-zone.routing';
@@ -9,19 +10,23 @@ import { SearchTextBoxComponent } from './components/search-text-box/search-text
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { CountryInfoComponent } from './components/country-info/country-info.component';
 import { TimeZoneInfoComponent } from './components/time-zone-info/time-zone-info.component';
+import { CountryInfoModelNamePipe } from './components/country-info/country-info-model-name.pipe';
 
 @NgModule({
     imports: [
+        CommonModule,
         FormsModule,
         AngularFontAwesomeModule,
         TimeZoneRoutingModule
     ],
     declarations: [
+        CountryInfoModelNamePipe,
         TimeZoneComponent,
         TimeZoneDetailsComponent,
         SearchTextBoxComponent,
         CountryInfoComponent,
-        TimeZoneInfoComponent
+        TimeZoneInfoComponent,
+        CountryInfoModelNamePipe
     ]
 })
 export class TimeZoneModule {

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
@@ -26,6 +27,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         ApplicationComponent,
     ],
     imports: [
+        CommonModule,
         BrowserModule,
         HttpClientModule,
         TranslateModule.forRoot({
