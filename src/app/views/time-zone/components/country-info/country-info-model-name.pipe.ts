@@ -7,6 +7,7 @@ import { CountryInfoModel } from './country-info-model';
 export class CountryInfoModelNamePipe implements PipeTransform {
 
     public transform(value: CountryInfoModel, args?: any): any {
+        debugger;
         if (!value) { return value; }
 
         return value.name;
