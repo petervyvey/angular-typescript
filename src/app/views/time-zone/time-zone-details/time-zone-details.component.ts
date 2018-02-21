@@ -23,11 +23,6 @@ export class TimeZoneDetailsComponent implements OnInit, OnDestroy {
         this.route.params
             .takeUntil(this.destroy$)
             .subscribe(x => this.timeZoneId = x.timeZoneId);
-
-        Observable.timer(5000)
-            .subscribe(x => {
-                this.countryInfoModel = new CountryInfoModel('be', 'Belgium');
-            });
     }
 
     public ngOnDestroy() {

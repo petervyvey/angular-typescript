@@ -49,8 +49,8 @@
             true,
             {
                 "order": [
-                    "static-field",
                     "constructor",
+                    "static-field",
                     "instance-field",
                     "public-instance-method",
                     "protected-instance-method",

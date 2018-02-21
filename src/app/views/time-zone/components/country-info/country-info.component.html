@@ -5,10 +5,8 @@
     <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <div>
-            <span [innerText]="model?.code"></span>
-            <span [innerText]="model | countryname : 'test'" [hidden]="!model?.name"></span>
-        </div>
         <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div [innerText]="timer$ | async"></div>
+        <div [innerText]="everyMinute$ | async"></div>
     </div>
 </div>

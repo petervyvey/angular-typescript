@@ -1,24 +1,39 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { CountryInfoModel } from './country-info-model';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { BehaviorSubject, ReplaySubject, Observable } from 'rxjs/Rx';
+import { CountryInfoModel, InternalModel, ICountryInfoModel, IStateSettings } from './country-info-model';
 
 @Component({
     selector: 'app-views-time-zone-country-info',
     templateUrl: './country-info.component.html',
     styleUrls: ['./country-info.component.scss']
 })
-export class CountryInfoComponent implements OnInit {
+export class CountryInfoComponent implements OnInit, OnDestroy {
 
     constructor() {
     }
 
-    public model$ = new BehaviorSubject<CountryInfoModel>(undefined);
+    private destroy$ = new ReplaySubject<boolean>();
+    public timer$ = Observable.timer(1000, 1000);
 
-    @Input('selectedCountry')
-    public set model(value: CountryInfoModel) { this.model$.next(value); }
-    public get model(): CountryInfoModel { return this.model$.value; }
+    public everyMinute$ =
+        this.timer$
+            .throttleTime(60000)
+            .map(seconds => Math.floor(seconds / 60));
+
+    public selectedCountry$ = new BehaviorSubject<CountryInfoModel>(undefined);
+    @Input()
+    public set selectedCountry(value: CountryInfoModel) { this.selectedCountry$.next(value); }
+
+    public model: InternalModel<ICountryInfoModel, IStateSettings>;
 
     public ngOnInit() {
+        this.selectedCountry$
+            .takeUntil(this.destroy$)
+            .subscribe(selected => this.model = selected ? new InternalModel<ICountryInfoModel, IStateSettings>(selected, { isOpen: true }) : null);
+    }
+
+    public ngOnDestroy(): void {
+        this.destroy$.next(true);
     }
 
 }
