@@ -5,12 +5,12 @@ export interface ICountryInfoModel {
     name: string;
 }
 
-export class CountryInfoModel implements ICountryInfoModel {
-    constructor(public code: string, public name: string) { }
-}
-
 export interface IStateSettings {
     isOpen: boolean;
+}
+
+export class CountryInfoModel implements ICountryInfoModel {
+    constructor(public code: string, public name: string) { }
 }
 
 export class InternalModel<TData extends ICountryInfoModel, TStateSettings extends IStateSettings> {
