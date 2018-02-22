@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Logger } from '../../shared.module';
+
+import { ComponentsModule } from '../../components/components.module';
 import { TimeZoneRoutingModule } from './time-zone.routing';
 
 import { TimeZoneComponent } from './time-zone.component';
@@ -17,6 +19,7 @@ import { CountryInfoModelNamePipe } from './components/country-info/country-info
         CommonModule,
         FormsModule,
         AngularFontAwesomeModule,
+        ComponentsModule,
         TimeZoneRoutingModule
     ],
     declarations: [
@@ -31,6 +34,6 @@ import { CountryInfoModelNamePipe } from './components/country-info/country-info
 })
 export class TimeZoneModule {
     constructor() {
-        Logger.Info('Views:TimeZoneModule', 'done');
+        Logger.info('Views:TimeZoneModule', 'done');
     }
 }

@@ -1,20 +1,18 @@
-
 import { NgModule } from '@angular/core';
 
-import * as CountrySelector from './country-selector';
+import { CountrySelectorModule } from './country-selector/country-selector.module';
 import { Logger } from '../shared.module';
 
-export {
-    CountrySelector
-};
-
 @NgModule({
-    declarations: [
-        CountrySelector.CountrySelectorComponent
+    imports: [
+        CountrySelectorModule
+    ],
+    exports: [
+        CountrySelectorModule
     ]
 })
 export class ComponentsModule {
     constructor() {
-        Logger.Info('Components:ComponentsModule', 'done');
+        Logger.info('Components:ComponentsModule', 'done');
     }
 }

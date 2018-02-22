@@ -20,7 +20,7 @@ export class InternalModel<TData extends ICountryInfoModel, TStateSettings exten
         this.state = Object.assign({}, InternalModel.DEFAULT_UI_SETTINGS, uiOptions) as TStateSettings;
     }
 
-    private static DEFAULT_UI_SETTINGS: IStateSettings = {
+    private static readonly DEFAULT_UI_SETTINGS: IStateSettings = {
         isOpen: true
     };
 

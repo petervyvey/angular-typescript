@@ -32,6 +32,6 @@ const routes: Routes = [
 })
 export class TimeZoneRoutingModule {
     constructor() {
-        Logger.Info('Views:TimeZoneRoutingModule', 'done');
+        Logger.info('Views:TimeZoneRoutingModule', 'done');
     }
 }

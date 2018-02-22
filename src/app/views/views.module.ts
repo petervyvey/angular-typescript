@@ -23,6 +23,6 @@ import { PopulationModule } from './population/population.module';
 })
 export class ViewsModule {
     constructor() {
-        Logger.Info('Views:ViewsModule', 'done');
+        Logger.info('Views:ViewsModule', 'done');
     }
 }

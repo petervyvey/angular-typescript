@@ -18,6 +18,6 @@ const routes: Routes = [
 })
 export class HomeRoutingModule {
     constructor() {
-        Logger.Info('Views:HomeRoutingModule', 'done');
+        Logger.info('Views:HomeRoutingModule', 'done');
     }
 }

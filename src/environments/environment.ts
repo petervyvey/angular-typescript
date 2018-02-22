@@ -5,55 +5,55 @@
 import { Level } from 'ng2-logger';
 
 export const environment = {
-  production: false,
-  defaultUiLanguage: 'en',
+    production: false,
+    defaultUiLanguage: 'en',
 
-  logger: {
-    default: {
-      levels: [
-        Level.ERROR,
-        Level.WARN,
-        Level.INFO
-        /* , Level.DATA */
-      ]
-    },
-    sinks: {
-      application: {
-        name: 'application',
-        levels: [
-          Level.ERROR,
-          Level.WARN,
-          Level.INFO
-          /* , Level.DATA */
-        ]
-      },
-      rest: {
-        name: 'rest',
-        levels: [
-          Level.ERROR,
-          Level.WARN,
-          Level.INFO
-          /* , Level.DATA */
-        ]
-      },
-      router: {
-        name: 'router',
-        levels: [
-          Level.ERROR,
-          Level.WARN,
-          Level.INFO
-          /* , Level.DATA */
-        ]
-      },
-      model: {
-        name: 'model',
-        levels: [
-          Level.ERROR,
-          Level.WARN,
-          Level.INFO
-          /* , Level.DATA */
-        ]
-      },
+    logger: {
+        default: {
+            levels: [
+                Level.ERROR,
+                Level.WARN,
+                Level.INFO,
+                /* , Level.DATA */
+            ]
+        },
+        sinks: {
+            application: {
+                name: 'application',
+                levels: [
+                    Level.ERROR,
+                    Level.WARN,
+                    Level.INFO,
+                    /* , Level.DATA */
+                ]
+            },
+            http: {
+                name: 'http',
+                levels: [
+                    Level.ERROR,
+                    Level.WARN,
+                    Level.INFO,
+                    /* , Level.DATA */
+                ]
+            },
+            router: {
+                name: 'router',
+                levels: [
+                    Level.ERROR,
+                    Level.WARN,
+                    Level.INFO,
+                    Level.DATA
+                ]
+            },
+            store: {
+                name: 'store',
+                levels: [
+                    Level.ERROR,
+                    Level.WARN,
+                    Level.INFO,
+                    /* , Level.DATA */
+                ]
+            },
+        }
     }
-  }
 };

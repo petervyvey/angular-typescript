@@ -24,6 +24,6 @@ import { ContentComponent } from './content/content.component';
 })
 export class LayoutModule {
     constructor() {
-        Logger.Info('Views:LayoutModule', 'done');
+        Logger.info('Views:LayoutModule', 'done');
     }
 }

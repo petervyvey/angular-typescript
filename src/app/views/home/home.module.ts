@@ -20,6 +20,6 @@ import { Logger } from '../../shared.module';
 })
 export class HomeModule {
     constructor() {
-        Logger.Info('Views:HomeModule', 'done');
+        Logger.info('Views:HomeModule', 'done');
     }
 }

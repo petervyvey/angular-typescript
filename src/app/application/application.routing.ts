@@ -24,6 +24,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 })
 export class ApplicationRouterModule {
     constructor() {
-        Logger.Info('Application:ApplicationRouterModule', 'done');
+        Logger.info('Application:ApplicationRouterModule', 'done');
     }
 }
