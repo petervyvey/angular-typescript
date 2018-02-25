@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { SharedModule, Logger, HttpLoggingInterceptor } from '../shared.module';
 
@@ -11,6 +10,7 @@ import { ApplicationRouterModule } from './application.routing';
 
 import { ComponentsModule } from '../components/components.module';
 import { ViewsModule } from '../views/views.module';
+import { TabsModule } from 'ngx-bootstrap';
 
 @NgModule({
     declarations: [
@@ -23,7 +23,7 @@ import { ViewsModule } from '../views/views.module';
 
         SharedModule,
 
-        NgbModule.forRoot(),
+        TabsModule.forRoot(),
         BrowserModule,
 
         ApplicationRouterModule,

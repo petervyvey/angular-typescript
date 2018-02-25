@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { LoggingModule, Logger, HttpLoggingInterceptor } from './services/logging/logging.module';
@@ -19,7 +18,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     imports: [
         CommonModule,
         RouterModule,
-        NgbModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
@@ -35,7 +33,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     exports: [
         CommonModule,
         RouterModule,
-        NgbModule,
         TranslateModule,
         LoggingModule
     ]

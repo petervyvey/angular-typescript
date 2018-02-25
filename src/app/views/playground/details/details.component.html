@@ -26,21 +26,18 @@
             </div>
         </div>
         <div class="col-sm-8">
-            <ngb-tabset>
-                <ngb-tab>
-                    <ng-template ngbTabTitle><b>Live information</b></ng-template>
-                    <ng-template ngbTabContent>
-                        <div class="row" style="margin-top: 12px;">
-                            <div class="col-sm">
-                                <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
-                            </div>
-                            <div class="col-sm">
-                                <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
-                            </div>
+            <tabset>
+                <tab heading="Live information">
+                    <div class="row" style="margin-top: 12px;">
+                        <div class="col-sm">
+                            <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
                         </div>
-                    </ng-template>
-                </ngb-tab>
-            </ngb-tabset>
+                        <div class="col-sm">
+                            <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
         </div>
     </div>
 </div>
@@ -106,13 +103,10 @@
 </div>
 <div class="row">
     <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-        <ngb-tabset>
-            <ngb-tab>
-                <ng-template ngbTabTitle><b>Production information</b></ng-template>
-                <ng-template ngbTabContent>
-                    <app-time-line></app-time-line>
-                </ng-template>
-            </ngb-tab>
-        </ngb-tabset>
+        <tabset>
+            <tab heading="Production information">
+                <app-time-line></app-time-line>
+            </tab>
+        </tabset>
     </div>
 </div>
