@@ -1,4 +1,99 @@
-$background: #007bff;
+
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+//
+// Color system
+//
+
+// stylelint-disable
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge((
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+), $grays);
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+$colors: map-merge((
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+), $colors);
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+), $theme-colors);
+// stylelint-enable
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
 
 .timeline {
 
@@ -7,7 +102,7 @@ $background: #007bff;
     &-item {
         position: relative;
         margin: 0 0 0 15px;
-        border-left: 1px dashed #007bff;
+        border-left: 1px dashed $gray-300;
         padding: 0 0 50px 40px;
 
         & > div.timeline-label {
@@ -16,11 +111,11 @@ $background: #007bff;
             font-weight: bold;
             width: 100px;
             height: 70px;
-            color: white;
+            color: $gray-600;
             text-align: center;
             left: -50px;
             top: 0;
-            background-color: $background;
+            background-color: $gray-300;
             padding: 8px;
         }
 
@@ -30,15 +125,85 @@ $background: #007bff;
             font-size: 18px;
             font-weight: bold;
             padding-left: 25px;
-            background-color: lighten($background, 45%);
-            border-top: 1px dashed $background;
-            border-bottom: 1px dashed $background;
-            border-right: 1px dashed $background;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-top: 1px dashed $gray-300;
+            border-bottom: 1px dashed $gray-300;
+            border-right: 1px dashed $gray-300;
         }
 
         & > div.timeline-content {
             margin-top: 15px;
             padding-left: 25px;
+        }
+
+        &-primary {
+            border-left: 1px dashed $primary;
+            & > div.timeline-label {
+                color: white;
+                background-color: $primary;
+            }
+
+            & > div.timeline-title {
+                border-top: 1px dashed $primary;
+                border-bottom: 1px dashed $primary;
+                border-right: 1px dashed $primary;
+            }
+        }
+
+        &-success {
+            border-left: 1px dashed $success;
+            & > div.timeline-label {
+                color: white;
+                background-color: $success;
+            }
+
+            & > div.timeline-title {
+                border-top: 1px dashed $success;
+                border-bottom: 1px dashed $success;
+                border-right: 1px dashed $success;
+            }
+        }
+
+        &-info {
+            border-left: 1px dashed $info;
+            & > div.timeline-label {
+                color: white;
+                background-color: $info;
+            }
+
+            & > div.timeline-title {
+                border-top: 1px dashed $info;
+                border-bottom: 1px dashed $info;
+                border-right: 1px dashed $info;
+            }
+        }
+
+        &-warning {
+            border-left: 1px dashed $warning;
+            & > div.timeline-label {
+                color: white;
+                background-color: $warning;
+            }
+
+            & > div.timeline-title {
+                border-top: 1px dashed $warning;
+                border-bottom: 1px dashed $warning;
+                border-right: 1px dashed $warning;
+            }
+        }
+
+        &-danger {
+            border-left: 1px dashed $danger;
+            & > div.timeline-label {
+                color: white;
+                background-color: $danger;
+            }
+
+            & > div.timeline-title {
+                border-top: 1px dashed $danger;
+                border-bottom: 1px dashed $danger;
+                border-right: 1px dashed $danger;
+            }
         }
     }
 
