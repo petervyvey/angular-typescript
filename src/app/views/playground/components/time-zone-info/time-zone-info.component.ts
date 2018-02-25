@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-views-time-zone-time-zone-info',
+    selector: 'app-views-playground-time-zone-info',
     templateUrl: './time-zone-info.component.html',
     styleUrls: ['./time-zone-info.component.scss']
 })

@@ -5,11 +5,11 @@ import { CountryInfoModel } from '../components/country-info/country-info-model'
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-    selector: 'app-time-zone-details',
-    templateUrl: './time-zone-details.component.html',
-    styleUrls: ['./time-zone-details.component.scss']
+    selector: 'app-view-playground-details',
+    templateUrl: './details.component.html',
+    styleUrls: ['./details.component.scss']
 })
-export class TimeZoneDetailsComponent implements OnInit, OnDestroy {
+export class DetailsComponent implements OnInit, OnDestroy {
 
     constructor(private route: ActivatedRoute) {
     }

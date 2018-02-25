@@ -3,7 +3,7 @@ import { BehaviorSubject, ReplaySubject, Observable } from 'rxjs/Rx';
 import { CountryInfoModel, InternalModel, ICountryInfoModel, IStateSettings } from './country-info-model';
 
 @Component({
-    selector: 'app-views-time-zone-country-info',
+    selector: 'app-views-playground-country-info',
     templateUrl: './country-info.component.html',
     styleUrls: ['./country-info.component.scss']
 })

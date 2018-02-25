@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IModel } from './components/search-text-box/model';
+
+import { SearchTextBox } from '../../components/components.module';
 
 @Component({
-    selector: 'app-view-time-zone',
-    templateUrl: './time-zone.component.html',
-    styleUrls: ['./time-zone.component.scss']
+    selector: 'app-view-playground',
+    templateUrl: './playground.component.html',
+    styleUrls: ['./playground.component.scss']
 })
-export class TimeZoneComponent implements OnInit {
+export class PlaygroundComponent implements OnInit {
 
     constructor(private router: Router, private route: ActivatedRoute) {
     }
@@ -18,11 +19,11 @@ export class TimeZoneComponent implements OnInit {
         this.route.params.subscribe(x => this.query = x.timeZoneId);
     }
 
-    public onModelChanged(model: IModel) {
+    public onModelChanged(model: SearchTextBox.ISearchTextBoxModel) {
         this.navigateTo(model.query);
     }
 
     private navigateTo(timeZoneId: string) {
-        this.router.navigate(['/timezone', timeZoneId]);
+        this.router.navigate(['/playground', timeZoneId]);
     }
 }

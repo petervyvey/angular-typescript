@@ -5,12 +5,10 @@ import { Logger } from '../../shared.module';
 import { NgbTabsetModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ComponentsModule } from '../../components/components.module';
-import { TimeZoneRoutingModule } from './time-zone.routing';
+import { TimeZoneRoutingModule } from './playround.routing';
 
-import { TimeZoneComponent } from './time-zone.component';
-import { TimeZoneDetailsComponent } from './time-zone-details/time-zone-details.component';
-import { SearchTextBoxComponent } from './components/search-text-box/search-text-box.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PlaygroundComponent } from './playground.component';
+import { DetailsComponent } from './details/details.component';
 import { CountryInfoComponent } from './components/country-info/country-info.component';
 import { TimeZoneInfoComponent } from './components/time-zone-info/time-zone-info.component';
 import { CountryInfoModelNamePipe } from './components/country-info/country-info-model-name.pipe';
@@ -19,16 +17,14 @@ import { CountryInfoModelNamePipe } from './components/country-info/country-info
     imports: [
         CommonModule,
         FormsModule,
-        AngularFontAwesomeModule,
         NgbTabsetModule,
         ComponentsModule,
         TimeZoneRoutingModule
     ],
     declarations: [
         CountryInfoModelNamePipe,
-        TimeZoneComponent,
-        TimeZoneDetailsComponent,
-        SearchTextBoxComponent,
+        PlaygroundComponent,
+        DetailsComponent,
         CountryInfoComponent,
         TimeZoneInfoComponent,
         CountryInfoModelNamePipe

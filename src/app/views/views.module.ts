@@ -4,7 +4,7 @@ import { Logger } from '../shared.module';
 
 import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
-import { TimeZoneModule } from './time-zone/time-zone.module';
+import { TimeZoneModule } from './playground/playground.module';
 import { PopulationModule } from './population/population.module';
 
 @NgModule({

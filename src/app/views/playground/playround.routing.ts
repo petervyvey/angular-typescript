@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { TimeZoneComponent } from './time-zone.component';
+import { PlaygroundComponent } from './playground.component';
 import { Logger } from '../../shared.module';
-import { TimeZoneDetailsComponent } from './time-zone-details/time-zone-details.component';
+import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [
     {
-        path: 'timezone',
-        component: TimeZoneComponent
+        path: 'playground',
+        component: PlaygroundComponent
     },
     {
-        path: 'timezone/:timeZoneId',
-        component: TimeZoneComponent,
+        path: 'playground/:timeZoneId',
+        component: PlaygroundComponent,
         children: [
             {
                 path: '**',
@@ -20,7 +20,7 @@ const routes: Routes = [
             },
             {
                 path: 'details',
-                component: TimeZoneDetailsComponent
+                component: DetailsComponent
             }
         ]
     }

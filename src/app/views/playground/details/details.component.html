@@ -2,9 +2,9 @@
     <div class="row">
         <div class="col-sm">
             <div>
-                <div style="padding-bottom: 8px; margin-bottom: 8px; font-size: 1.4rem; font-weight: bold; border-bottom: 1px solid #dee2e6;">HEALTHBOX3</div>
+                <div style="padding-bottom: 2²px; margin-bottom: 8px; font-size: 1.6rem; font-weight: bold; border-bottom: 1px solid #dee2e6;">HEALTHBOX3</div>
                 <div>
-                    <table>
+                    <table style="font-size: 1.1rem;">
                         <tr>
                             <td style="font-weight: bold; text-wrap: none; padding: 0 16px 0 0;">
                                 Label
@@ -32,10 +32,10 @@
                     <ng-template ngbTabContent>
                         <div class="row" style="margin-top: 12px;">
                             <div class="col-sm">
-                                <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+                                <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
                             </div>
                             <div class="col-sm">
-                                <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+                                <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
                             </div>
                         </div>
                     </ng-template>
@@ -66,10 +66,10 @@
     </div>
     <div class="row">
         <div class="col-sm">
-            <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+            <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
         </div>
         <div class="col-sm">
-            <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+            <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
         </div>
     </div>
 </div>
@@ -95,12 +95,24 @@
     </div>
     <div class="row">
         <div class="col-sm">
-            <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+            <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
         </div>
     </div>
     <div class="row">
         <div class="col-sm">
-            <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+            <app-views-playground-time-zone-info></app-views-playground-time-zone-info>
         </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <ngb-tabset>
+            <ngb-tab>
+                <ng-template ngbTabTitle><b>Production information</b></ng-template>
+                <ng-template ngbTabContent>
+                    <app-time-line></app-time-line>
+                </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
     </div>
 </div>
