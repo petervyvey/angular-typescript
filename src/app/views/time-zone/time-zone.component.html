@@ -8,6 +8,18 @@
         <router-outlet></router-outlet>
     </div>
 </div>
-<app-country-selector></app-country-selector>
+<div style="margin-top:40px;"></div>
+<div class="row">
+    <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <ngb-tabset>
+            <ngb-tab>
+                <ng-template ngbTabTitle><b>Production information</b></ng-template>
+                <ng-template ngbTabContent>
+                    <app-time-line></app-time-line>
+                </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
+    </div>
+</div>
 
 

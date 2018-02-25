@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Logger } from '../../shared.module';
+import { NgbTabsetModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ComponentsModule } from '../../components/components.module';
 import { TimeZoneRoutingModule } from './time-zone.routing';
@@ -19,6 +20,7 @@ import { CountryInfoModelNamePipe } from './components/country-info/country-info
         CommonModule,
         FormsModule,
         AngularFontAwesomeModule,
+        NgbTabsetModule,
         ComponentsModule,
         TimeZoneRoutingModule
     ],

@@ -1,8 +1,106 @@
-<div class="row">
-    <div class="col-sm">
-        <app-views-time-zone-country-info [selectedCountry]="countryInfoModel"></app-views-time-zone-country-info>
+<div class="d-sm-none d-md-none d-lg-block">
+    <div class="row">
+        <div class="col-sm">
+            <div>
+                <div style="padding-bottom: 8px; margin-bottom: 8px; font-size: 1.4rem; font-weight: bold; border-bottom: 1px solid #dee2e6;">HEALTHBOX3</div>
+                <div>
+                    <table>
+                        <tr>
+                            <td style="font-weight: bold; text-wrap: none; padding: 0 16px 0 0;">
+                                Label
+                            </td>
+                            <td>
+                                Value
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; text-wrap: none; padding: 0 16px 0 0;">
+                                Omschrijving
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <ngb-tabset>
+                <ngb-tab>
+                    <ng-template ngbTabTitle><b>Live information</b></ng-template>
+                    <ng-template ngbTabContent>
+                        <div class="row" style="margin-top: 12px;">
+                            <div class="col-sm">
+                                <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+                            </div>
+                            <div class="col-sm">
+                                <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ngb-tab>
+            </ngb-tabset>
+        </div>
     </div>
-    <div class="col-sm">
-        <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+</div>
+<div class="d-lg-none d-md-block d-sm-none">
+    <div class="row">
+        <div class="col-sm">
+            <div>
+                <div style="font-size: 1.4rem; font-weight: bold; border-bottom: 1px solid #4a4a4a">HEALTHBOX3</div>
+                <div>
+                    <div class="row">
+                        <div class="col-sm col-lg">Label</div>
+                        <div class="col-sm-6 col-md-7 col-lg-8">Value</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-sm col-lg">Omschrijving</div>
+                        <div class="col-sm-6 col-md-7 col-lg-8">Test</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+        </div>
+        <div class="col-sm">
+            <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+        </div>
+    </div>
+</div>
+<div class="d-lg-none d-md-none d-sm-block">
+    <div class="row">
+        <div class="col-sm">
+            <div>
+                <div style="font-size: 1.4rem; font-weight: bold; border-bottom: 1px solid #4a4a4a">HEALTHBOX3</div>
+                <div>
+                    <div class="row">
+                        <div class="col-sm col-lg">Label</div>
+                        <div class="col-sm-6 col-md-7 col-lg-8">Value</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-sm col-lg">Omschrijving</div>
+                        <div class="col-sm-6 col-md-7 col-lg-8">Test</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <app-views-time-zone-time-zone-info></app-views-time-zone-time-zone-info>
+        </div>
     </div>
 </div>
