@@ -13,8 +13,4 @@ export class TimeZoneComponent implements OnInit {
   public ngOnInit() {
   }
 
-  public onNavigate() {
-      this.router.navigate(['/timezones', 'test']);
-  }
-
 }
