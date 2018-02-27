@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { SearchTextBox } from '../../components/components.module';
+import { SearchTextBox } from '@components/components.module';
 
 @Component({
     selector: 'app-view-playground',

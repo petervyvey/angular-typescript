@@ -95,7 +95,7 @@ $yiq-contrasted-threshold: 150 !default;
 $yiq-text-dark: $gray-900 !default;
 $yiq-text-light: $white !default;
 
-.timeline {
+.time-line {
 
     padding: 25px 0 0 35px;
 
@@ -105,7 +105,7 @@ $yiq-text-light: $white !default;
         border-left: 1px dashed $gray-300;
         padding: 0 0 50px 40px;
 
-        & > div.timeline-label {
+        & > div.time-line-label {
             position: absolute;
             font-size: 1.2rem;
             font-weight: bold;
@@ -119,7 +119,7 @@ $yiq-text-light: $white !default;
             padding: 8px;
         }
 
-        & > div.timeline-title {
+        & > div.time-line-title {
             height: 70px;
             line-height: 70px;
             font-size: 18px;
@@ -131,19 +131,19 @@ $yiq-text-light: $white !default;
             border-right: 1px dashed $gray-300;
         }
 
-        & > div.timeline-content {
+        & > div.time-line-content {
             margin-top: 15px;
             padding-left: 25px;
         }
 
         &-primary {
             border-left: 1px dashed $primary;
-            & > div.timeline-label {
+            & > div.time-line-label {
                 color: white;
                 background-color: $primary;
             }
 
-            & > div.timeline-title {
+            & > div.time-line-title {
                 border-top: 1px dashed $primary;
                 border-bottom: 1px dashed $primary;
                 border-right: 1px dashed $primary;
@@ -152,12 +152,12 @@ $yiq-text-light: $white !default;
 
         &-success {
             border-left: 1px dashed $success;
-            & > div.timeline-label {
+            & > div.time-line-label {
                 color: white;
                 background-color: $success;
             }
 
-            & > div.timeline-title {
+            & > div.time-line-title {
                 border-top: 1px dashed $success;
                 border-bottom: 1px dashed $success;
                 border-right: 1px dashed $success;
@@ -166,12 +166,12 @@ $yiq-text-light: $white !default;
 
         &-info {
             border-left: 1px dashed $info;
-            & > div.timeline-label {
+            & > div.time-line-label {
                 color: white;
                 background-color: $info;
             }
 
-            & > div.timeline-title {
+            & > div.time-line-title {
                 border-top: 1px dashed $info;
                 border-bottom: 1px dashed $info;
                 border-right: 1px dashed $info;
@@ -180,12 +180,12 @@ $yiq-text-light: $white !default;
 
         &-warning {
             border-left: 1px dashed $warning;
-            & > div.timeline-label {
+            & > div.time-line-label {
                 color: white;
                 background-color: $warning;
             }
 
-            & > div.timeline-title {
+            & > div.time-line-title {
                 border-top: 1px dashed $warning;
                 border-bottom: 1px dashed $warning;
                 border-right: 1px dashed $warning;
@@ -194,12 +194,12 @@ $yiq-text-light: $white !default;
 
         &-danger {
             border-left: 1px dashed $danger;
-            & > div.timeline-label {
+            & > div.time-line-label {
                 color: white;
                 background-color: $danger;
             }
 
-            & > div.timeline-title {
+            & > div.time-line-title {
                 border-top: 1px dashed $danger;
                 border-bottom: 1px dashed $danger;
                 border-right: 1px dashed $danger;
@@ -207,8 +207,24 @@ $yiq-text-light: $white !default;
         }
     }
 
-    &-item:last-child {;
-        border-left: none;
+    &-item {;
+        // border-left: none;
+
+        &:last-child {
+            border-bottom: 1px dashed $primary;
+        }
+    }
+
+    &-item {;
+        // border-left: none;
+
+        &:last-child {
+            border-bottom: 1px dashed $gray-300;
+        }
+
+        &-primary:last-child {
+            border-bottom: 1px dashed $primary;
+        }
     }
 }
 

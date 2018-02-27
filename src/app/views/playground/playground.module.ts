@@ -30,8 +30,8 @@ import { TabsModule } from 'ngx-bootstrap';
         CountryInfoModelNamePipe
     ]
 })
-export class TimeZoneModule {
+export class PlaygroundModule {
     constructor() {
-        Logger.info('Views:TimeZoneModule', 'done');
+        Logger.info('Views:PlaygroundModule', 'done');
     }
 }
