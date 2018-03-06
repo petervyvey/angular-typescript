@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-import { Logger } from '../../shared.module';
+import { Logger } from '@shared/shared.module';
 
 const routes: Routes = [
     {

@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
-import { SharedModule, Logger, HttpLoggingInterceptor } from '../shared.module';
+import { SharedModule, Logger, HttpLoggingInterceptor } from '@shared/shared.module';
 
 import { ApplicationComponent } from './application.component';
 import { ApplicationRouterModule } from './application.routing';
 
-import { ComponentsModule } from '../components/components.module';
+import { ComponentsModule } from '@components/components.module';
 import { ViewsModule } from '../views/views.module';
 import { TabsModule } from 'ngx-bootstrap';
 

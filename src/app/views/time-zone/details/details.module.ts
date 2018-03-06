@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailsComponent } from './details.component';
-import { Logger } from '../../../shared.module';
+import { Logger } from '@shared/shared.module';
 
 @NgModule({
   imports: [

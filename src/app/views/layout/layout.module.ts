@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Logger } from '../../shared.module';
+import { Logger } from '@shared/shared.module';
 
 import { LayoutComponent } from './layout.component';
 import { NavigationComponent } from './navigation/navigation.component';

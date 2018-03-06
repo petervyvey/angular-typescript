@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Logger } from '../shared.module';
+import { Logger } from '@shared/shared.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({

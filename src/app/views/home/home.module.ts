@@ -3,7 +3,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home.routing';
-import { Logger } from '../../shared.module';
+import { Logger } from '@shared/shared.module';
 
 @NgModule({
     imports: [

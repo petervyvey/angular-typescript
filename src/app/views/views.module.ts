@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { Logger } from '../shared.module';
+import { Logger } from '@shared/shared.module';
 
 import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';

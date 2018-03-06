@@ -6,7 +6,7 @@ import { SearchTextBoxComponent } from './search-text-box/search-text-box.compon
 import * as SearchTextBox from './search-text-box/search-text-box-model';
 
 import { CountrySelectorModule } from './country-selector/country-selector.module';
-import { Logger } from '../shared.module';
+import { Logger } from '@shared/shared.module';
 import { TimeLineComponent } from './time-line/time-line.component';
 
 @NgModule({

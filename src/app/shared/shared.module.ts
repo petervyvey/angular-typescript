@@ -4,10 +4,10 @@ import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
-import { LoggingModule, Logger, HttpLoggingInterceptor } from './services/logging/logging.module';
+import { LoggingModule, Logger, HttpLoggingInterceptor } from '@services/logging/logging.module';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { environment } from '../environments/environment';
+import { environment } from '@environments/environment';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {

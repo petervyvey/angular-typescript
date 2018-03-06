@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { PlaygroundComponent } from './playground.component';
-import { Logger } from '../../shared.module';
+import { Logger } from '@shared/shared.module';
 import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [

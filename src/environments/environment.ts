@@ -8,6 +8,12 @@ export const environment = {
     production: false,
     defaultUiLanguage: 'en',
 
+    timeZoneDb: {
+        url: 'https://api.timezonedb.com/v2',
+        apiKey: 'WH4CEN85KTC9',
+        format: 'json'
+    },
+
     logger: {
         default: {
             levels: [

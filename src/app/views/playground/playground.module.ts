@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Logger } from '../../shared.module';
+import { Logger } from '@shared/shared.module';
 
 import { ComponentsModule } from '../../components/components.module';
 import { TimeZoneRoutingModule } from './playround.routing';

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Logger } from '../../shared.module';
+import { Logger } from '@shared/shared.module';
 import { TimeZoneComponent } from './time-zone.component';
 import { DetailsComponent } from './details/details.component';
 
