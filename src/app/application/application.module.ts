@@ -11,6 +11,8 @@ import { ApplicationRouterModule } from './application.routing';
 import { ComponentsModule } from '@components/components.module';
 import { ViewsModule } from '../views/views.module';
 import { TabsModule } from 'ngx-bootstrap';
+import { StoreModule } from '@ngrx/store';
+import { StoreModule as ApplicationStoreModule } from '@store/store.module';
 
 @NgModule({
     declarations: [
@@ -21,6 +23,8 @@ import { TabsModule } from 'ngx-bootstrap';
         BrowserModule,
         HttpClientModule,
 
+        StoreModule.forRoot({}),
+        ApplicationStoreModule,
         SharedModule,
 
         TabsModule.forRoot(),

@@ -20,6 +20,12 @@
             "@environments/*": [
                 "environments/*"
             ],
+            "@lib": [
+                "app/lib/lib.module"
+            ],
+            "@lib/*": [
+                "app/lib/*"
+            ],
             "@shared/*": [
                 "app/shared/*"
             ],

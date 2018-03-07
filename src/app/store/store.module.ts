@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { TimeZoneModule } from '@store/time-zone/time-zone.module';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: []
+    imports: [
+        TimeZoneModule
+    ],
+    exports: [
+        TimeZoneModule
+    ]
 })
 class StoreModule {}
 
-export { StoreModule };
+export {
+    StoreModule
+};
