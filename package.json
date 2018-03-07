@@ -13,7 +13,7 @@
     "clean-step:node_modules": "node lib/rimraf-standalone.js node_modules",
     "build-step:dev": "npm run serve",
     "build-step:prd": "npm run build",
-    "build-step:lint": "tslint --project tsconfig.json ./src/**/*.ts",
+    "build-step:lint": "tslint --project tsconfig.json './src/**/*.ts'",
     "pipeline:clean": "npm run pipeline:clean:dev",
     "pipeline:clean:dev": "npm run clean-step:dist",
     "pipeline:clean:all": "npm run clean-step:dist && npm run clean-step:node_modules",
