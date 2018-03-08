@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { TimeZoneDbStoreService } from '@services/time-zone-db-store/time-zone-db-store.module';
 import { IState } from '@store/state';
+import { CountryInfo } from '@store/time-zone/models/country-info';
+import { SetCountries } from '@store/time-zone/actions/set-countries.action';
 
 @Component({
     selector: 'app-views-time-zone',
@@ -19,7 +21,9 @@ export class TimeZoneComponent implements OnInit {
         state.subscribe(x => console.log('state', x));
 
         this.service.getTimeZones()
-            .subscribe(x => console.log('done', x));
+            .map(x => x.zones.map(z => new CountryInfo(z.countryCode, z.countryName)))
+            .do(x => state.dispatch(new SetCountries({countries: x})))
+            .subscribe();
     }
 
 }
