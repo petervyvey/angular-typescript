@@ -5,30 +5,36 @@ import * as Model from '../models/models.module';
 
 export interface ITimeZoneState {
     countries: Model.CountryInfo[];
+    pending: boolean;
 }
 
 export const initialState: ITimeZoneState = {
-    countries: []
+    countries: [],
+    pending: false
 };
 
 export const reducer: ActionReducer<ITimeZoneState> = (state: ITimeZoneState = initialState, action: Actions) => {
 
     switch (action.type) {
 
-        case Action.SET_COUNTRIES: {
-            const payload = action.payload as Action.ISetCountriesPayload;
-            // state.countries = [].concat(payload.countries.map(x => Object.assign({}, x)));
-            // state = Object.assign({}, state);
+        case Action.RETRIEVING_COUNTRIES:
 
             return {
                 ...state,
-                countries: payload.countries
+                pending: true
             };
-        }
+
+        case Action.SET_COUNTRIES:
+            const payload = action.payload as Action.ISetCountriesPayload;
+
+            return {
+                ...state,
+                countries: payload.countries,
+                pending: false
+            };
 
         default:
             return state;
 
     }
 };
-

@@ -3,7 +3,7 @@ import { Utils } from '@lib';
 
 import { CountryInfo } from '@store/time-zone/models/country-info';
 
-export const SET_COUNTRIES = Utils.type('SET_COUNTRIES');
+export const SET_COUNTRIES = Utils.type('TIME_ZONE.SET_COUNTRIES');
 
 export interface ISetCountriesPayload {
     countries: CountryInfo[];
