@@ -6,7 +6,7 @@ import { IState } from '@store/state';
 import { CountryInfo } from '@store/time-zone/models/country-info';
 import { SetCountries } from '@store/time-zone/actions/set-countries.action';
 import { RetrievingCountries } from '@store/time-zone/actions/actions.module';
-import { Scheduler } from 'rxjs/Rx';
+import { Scheduler, Observable } from 'rxjs/Rx';
 
 @Component({
     selector: 'app-views-time-zone',
@@ -20,18 +20,22 @@ export class TimeZoneComponent implements OnInit, OnDestroy {
     public destroy$ = new ReplaySubject<boolean>();
 
     public ngOnInit() {
-        console.log('store', this.store);
         const state = this.store.select(x => x.timeZone);
 
         state
-        .takeUntil(this.destroy$)
-        .subscribe(x => console.log('state', x));
+            .takeUntil(this.destroy$)
+            .do(s => console.log('state', s))
+            .subscribe();
 
-        state.dispatch(new RetrievingCountries());
-        this.service.getTimeZones()
-            .take(1)
-            .map(x => x.zones.map(z => new CountryInfo(z.countryCode, z.countryName)))
-            .do(x => state.dispatch(new SetCountries({ countries: x })))
+        state.
+            take(1)
+            .filter(tz => tz.countries && !tz.countries.length)
+            .do(() => state.dispatch(new RetrievingCountries()))
+            .switchMap(() =>
+                this.service.getTimeZones()
+                    .map(tz => tz.zones.map(z => new CountryInfo(z.countryCode, z.countryName)))
+                    .do(c => state.dispatch(new SetCountries({ countries: c })))
+            )
             .subscribe();
     }
 
