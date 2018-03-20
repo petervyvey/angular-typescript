@@ -29,6 +29,7 @@ export class TimeZoneComponent implements OnInit, OnDestroy {
 
         state.
             take(1)
+            .observeOn(Scheduler.async)
             .filter(tz => tz.countries && !tz.countries.length)
             .do(() => state.dispatch(new RetrievingCountries()))
             .switchMap(() =>
