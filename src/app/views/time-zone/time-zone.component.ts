@@ -19,8 +19,14 @@ export class TimeZoneComponent implements OnInit, OnDestroy {
 
     public destroy$ = new ReplaySubject<boolean>();
 
+<<<<<<< Updated upstream
     public ngOnInit() {
         const state = this.store.select(x => x.timeZone);
+=======
+    ngOnInit() {
+        this.route.params.subscribe(x => this.query = x.timeZoneId);
+    }
+>>>>>>> Stashed changes
 
         state
             .takeUntil(this.destroy$)
